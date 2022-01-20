@@ -1,8 +1,6 @@
 import com.bijoysingh.quicknote.R
 
-open class HomePage : EspressoBaseTest() {
+class HomePage {
 
-    fun getRecyclerView(): Int {
-        return R.id.recycler_view
-    }
+    val recyclerView = R.id.recycler_view
 }

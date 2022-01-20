@@ -1,7 +1,13 @@
+import EspressoBaseTest.checkElementIsDisplayed
+import EspressoBaseTest.checkMatchesStringInElement
+import EspressoBaseTest.checkStringInComponentHostIsDisplayed
+import EspressoBaseTest.clickBottomToolbarButton
+import EspressoBaseTest.clickButton
 import androidx.test.rule.ActivityTestRule
 import com.maubis.scarlet.base.MainActivity
 import org.junit.Rule
 import org.junit.Test
+import ui.*
 
 class TestPlan {
 
@@ -10,11 +16,57 @@ class TestPlan {
     var activityTestRule = ActivityTestRule(MainActivity::class.java)
 
     @Test
-    fun openApp() {
+    fun checkEmptyNotes() {
+        HomePage().recyclerView.clickRecyclerViewItem(1)
     }
 
     @Test
-    fun clickEmptyNotes() {
-        HomePage().recyclerView.clickRecyclerViewItem(1)
+    fun checkTitleContent() {
+        checkMatchesStringInElement(HomePage().toolbarTitleView, HomePage().appToolbarTitle)
+    }
+
+    @Test
+    fun checkSearchButton() {
+        clickButton(HomePage().searchIconButton)
+        checkElementIsDisplayed(SearchScreen().searchBox)
+    }
+
+    @Test
+    fun checkSettingsButton() {
+        clickButton(HomePage().settingsIconButton)
+        checkStringInComponentHostIsDisplayed(SettingsBottomSheet().settingsBottomSheetTitle)
+    }
+
+    @Test
+    fun checkDebugButton() {
+        clickButton(HomePage().debugIconButton)
+        checkStringInComponentHostIsDisplayed(DebugBottomSheet().debugBottomSheetTitle)
+    }
+
+    @Test
+    fun checkMenuButton() {
+        clickBottomToolbarButton(HomePage().menuIconButtonNumber)
+        checkStringInComponentHostIsDisplayed(HomeBottomSheet().homeMenuString)
+    }
+
+    @Test
+    fun checkNotebookButton() {
+        clickBottomToolbarButton(HomePage().notebookIconButtonNumber)
+        checkMatchesStringInElement(
+            NotebookBottomSheet().notebookToolbarTitleView,
+            NotebookBottomSheet().notebookTitle
+        )
+    }
+
+    @Test
+    fun checkAddListButton() {
+        clickBottomToolbarButton(HomePage().addListIconButtonNumber)
+        checkElementIsDisplayed(AddListScreen().addListAdvancedNoteRecycler)
+    }
+
+    @Test
+    fun noteListAddListButton() {
+        clickBottomToolbarButton(HomePage().addNoteListIconButtonNumber)
+        checkElementIsDisplayed(AddNoteScreen().addNoteAdvancedNoteRecycler)
     }
 }

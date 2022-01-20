@@ -1,4 +1,3 @@
-import androidx.test.espresso.action.ViewActions.click
 import androidx.test.rule.ActivityTestRule
 import com.maubis.scarlet.base.MainActivity
 import org.junit.Rule
@@ -16,6 +15,6 @@ class TestPlan {
 
     @Test
     fun clickEmptyNotes() {
-        actionOnRecyclerViewItem(HomePage().recyclerView, 1, click())
+        HomePage().recyclerView.clickRecyclerViewItem(1)
     }
 }

@@ -3,17 +3,10 @@ import EspressoBaseTest.checkMatchesStringInElement
 import EspressoBaseTest.checkStringInComponentHostIsDisplayed
 import EspressoBaseTest.clickBottomToolbarButton
 import EspressoBaseTest.clickButton
-import androidx.test.rule.ActivityTestRule
-import com.maubis.scarlet.base.MainActivity
-import org.junit.Rule
 import org.junit.Test
 import ui.*
 
-class TestPlan {
-
-    @Rule
-    @JvmField
-    var activityTestRule = ActivityTestRule(MainActivity::class.java)
+class TestPlan : BaseClass() {
 
     @Test
     fun checkEmptyNotes() {

@@ -1,7 +1,12 @@
 package ui
 
-import Utils.getResourceString
+import ContextUtils.getResourceString
 import com.bijoysingh.quicknote.R
+
+const val MENU_ICON_BUTTON_NUMBER = 0
+const val NOTEBOOK_ICON_BUTTON_NUMBER = 1
+const val ADD_LIST_ICON_BUTTON_NUMBER = 2
+const val ADD_NOTE_LIST_ICON_BUTTON_NUMBER = 3
 
 class HomePage {
 
@@ -11,9 +16,4 @@ class HomePage {
     val settingsIconButton = R.id.toolbarIconSettings
     val debugIconButton = R.id.toolbarIconDebug
     val appToolbarTitle = getResourceString(R.string.app_name)
-
-    val menuIconButtonNumber = 0
-    val notebookIconButtonNumber = 1
-    val addListIconButtonNumber = 2
-    val addNoteListIconButtonNumber = 3
 }

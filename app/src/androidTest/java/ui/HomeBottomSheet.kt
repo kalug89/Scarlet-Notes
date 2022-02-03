@@ -1,6 +1,6 @@
 package ui
 
-import Utils.getResourceString
+import ContextUtils.getResourceString
 import com.bijoysingh.quicknote.R
 
 class HomeBottomSheet {

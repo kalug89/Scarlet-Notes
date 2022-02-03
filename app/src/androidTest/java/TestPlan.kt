@@ -1,65 +1,69 @@
-import EspressoBaseTest.checkElementIsDisplayed
-import EspressoBaseTest.checkMatchesStringInElement
-import EspressoBaseTest.checkStringInComponentHostIsDisplayed
-import EspressoBaseTest.clickBottomToolbarButton
-import EspressoBaseTest.clickButton
 import org.junit.Test
 import ui.*
 
-class TestPlan : BaseClass() {
+class TestPlan : BaseTestPlan() {
+
+    private val homePage = HomePage()
+    private val searchScreen = SearchScreen()
+    private val settingsBottomSheet = SettingsBottomSheet()
+    private val debugBottomSheet = DebugBottomSheet()
+    private val homeBottomSheet = HomeBottomSheet()
+    private val notebookBottomSheet = NotebookBottomSheet()
+    private val addListScreen = AddListScreen()
+    private val addNoteScreen = AddNoteScreen()
 
     @Test
     fun checkEmptyNotes() {
-        HomePage().recyclerView.clickRecyclerViewItem(1)
+        homePage.recyclerView.clickRecyclerViewItem(1)
     }
 
     @Test
     fun checkTitleContent() {
-        checkMatchesStringInElement(HomePage().toolbarTitleView, HomePage().appToolbarTitle)
+        checkMatchesStringInElement(homePage.toolbarTitleView, homePage.appToolbarTitle)
     }
 
     @Test
     fun checkSearchButton() {
-        clickButton(HomePage().searchIconButton)
-        checkElementIsDisplayed(SearchScreen().searchBox)
+        clickButton(homePage.searchIconButton)
+        checkElementIsDisplayed(searchScreen.searchBox)
     }
 
     @Test
     fun checkSettingsButton() {
-        clickButton(HomePage().settingsIconButton)
-        checkStringInComponentHostIsDisplayed(SettingsBottomSheet().settingsBottomSheetTitle)
+        clickButton(homePage.settingsIconButton)
+        checkStringInComponentHostIsDisplayed(settingsBottomSheet.settingsBottomSheetTitle)
     }
 
     @Test
     fun checkDebugButton() {
-        clickButton(HomePage().debugIconButton)
-        checkStringInComponentHostIsDisplayed(DebugBottomSheet().debugBottomSheetTitle)
+        clickButton(homePage.debugIconButton)
+        checkStringInComponentHostIsDisplayed(debugBottomSheet.debugBottomSheetTitle)
     }
 
     @Test
     fun checkMenuButton() {
-        clickBottomToolbarButton(HomePage().menuIconButtonNumber)
-        checkStringInComponentHostIsDisplayed(HomeBottomSheet().homeMenuString)
+        clickBottomToolbarButton(MENU_ICON_BUTTON_NUMBER)
+        checkStringInComponentHostIsDisplayed(homeBottomSheet.homeMenuString)
     }
 
     @Test
     fun checkNotebookButton() {
-        clickBottomToolbarButton(HomePage().notebookIconButtonNumber)
+        clickBottomToolbarButton(NOTEBOOK_ICON_BUTTON_NUMBER)
         checkMatchesStringInElement(
-            NotebookBottomSheet().notebookToolbarTitleView,
-            NotebookBottomSheet().notebookTitle
+            notebookBottomSheet.notebookToolbarTitleView,
+            notebookBottomSheet.notebookTitle
         )
     }
 
     @Test
     fun checkAddListButton() {
-        clickBottomToolbarButton(HomePage().addListIconButtonNumber)
-        checkElementIsDisplayed(AddListScreen().addListAdvancedNoteRecycler)
+        clickBottomToolbarButton(ADD_LIST_ICON_BUTTON_NUMBER)
+        checkElementIsDisplayed(addListScreen.addListAdvancedNoteRecycler)
     }
 
     @Test
     fun noteListAddListButton() {
-        clickBottomToolbarButton(HomePage().addNoteListIconButtonNumber)
-        checkElementIsDisplayed(AddNoteScreen().addNoteAdvancedNoteRecycler)
+        clickBottomToolbarButton(ADD_NOTE_LIST_ICON_BUTTON_NUMBER)
+        checkElementIsDisplayed(addNoteScreen.addNoteAdvancedNoteRecycler)
     }
 }

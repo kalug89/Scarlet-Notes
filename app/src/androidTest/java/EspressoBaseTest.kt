@@ -12,15 +12,12 @@ import org.hamcrest.Matcher
 import org.hamcrest.TypeSafeMatcher
 import org.hamcrest.core.AllOf.allOf
 
-object EspressoBaseTest {
-
     fun clickButton(@IdRes viewId: Int) {
         onView(withId(viewId)).perform(click())
     }
 
     fun checkMatchesStringInElement(@IdRes viewId: Int, content: String) {
         onView(withId(viewId)).check(matches(withText(content)))
-
     }
 
     fun checkStringInComponentHostIsDisplayed(text: String) {
@@ -36,7 +33,6 @@ object EspressoBaseTest {
         onView(withId(viewId)).check(matches(isDisplayed()))
     }
 
-
     fun clickBottomToolbarButton(item: Int) {
         onView(
             allOf(
@@ -48,7 +44,6 @@ object EspressoBaseTest {
             )
         )
             .perform(click())
-
     }
 
     private fun childAtPosition(
@@ -68,5 +63,3 @@ object EspressoBaseTest {
             }
         }
     }
-
-}

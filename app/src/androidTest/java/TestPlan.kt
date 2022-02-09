@@ -1,8 +1,8 @@
-import EspressoBaseTest.checkElementIsDisplayed
-import EspressoBaseTest.checkMatchesStringInElement
-import EspressoBaseTest.checkStringInComponentHostIsDisplayed
-import EspressoBaseTest.clickBottomToolbarButton
-import EspressoBaseTest.clickButton
+import BaseTestPlan.checkElementIsDisplayed
+import BaseTestPlan.checkMatchesStringInElement
+import BaseTestPlan.checkStringInComponentHostIsDisplayed
+import BaseTestPlan.clickBottomToolbarButton
+import BaseTestPlan.clickButton
 import androidx.test.rule.ActivityTestRule
 import com.maubis.scarlet.base.MainActivity
 import org.junit.Rule

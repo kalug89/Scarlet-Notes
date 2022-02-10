@@ -11,7 +11,11 @@ open class BaseTestPlan {
 
     @get:Rule
     var mActivityRule = ActivityScenarioRule<Activity>(
-        Intent().setComponent(ComponentName("com.bijoysingh.quicknote", "com.maubis.scarlet.base.MainActivity"))
+        Intent().setComponent(
+            ComponentName(
+                "com.bijoysingh.quicknote",
+                "com.maubis.scarlet.base.MainActivity"
+            )
+        )
     )
-
 }

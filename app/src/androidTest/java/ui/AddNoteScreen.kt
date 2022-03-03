@@ -6,19 +6,19 @@ import clickBottomHorizontalViewButton
 import clickBottomToolbarButton
 import com.bijoysingh.quicknote.R
 
-const val NOTE_SCREEN_BOTTOM_BAR_ADD_SMALL_HEADING_NUMBER = 1
-const val NOTE_SCREEN_BOTTOM_BAR_ADD_ITEM_BUTTON_NUMBER = 2
-const val NOTE_SCREEN_BOTTOM_BAR_ADD_QUOTED_BUTTON_NUMBER = 3
-const val NOTE_SCREEN_BOTTOM_BAR_EXTEND_MENU_BUTTON_NUMBER = 4
-const val NOTE_SCREEN_BOTTOM_ADD_CODE_MENU_NUMBER = 5
+private const val NOTE_SCREEN_BOTTOM_BAR_ADD_SMALL_HEADING_NUMBER = 1
+private const val NOTE_SCREEN_BOTTOM_BAR_ADD_ITEM_BUTTON_NUMBER = 2
+private const val NOTE_SCREEN_BOTTOM_BAR_ADD_QUOTED_BUTTON_NUMBER = 3
+private const val NOTE_SCREEN_BOTTOM_BAR_EXTEND_MENU_BUTTON_NUMBER = 4
+private const val NOTE_SCREEN_BOTTOM_ADD_CODE_MENU_NUMBER = 5
 
-const val NOTE_SCREEN_BOTTOM_BAR_HORIZONTAL_NUMBER = 0
+private const val NOTE_SCREEN_BOTTOM_BAR_HORIZONTAL_NUMBER = 0
 
-const val NOTE_SCREEN_EDIT_TEXT_POSITION_FIRST = 0
-const val NOTE_SCREEN_EDIT_TEXT_POSITION_SECOND = 1
+private const val NOTE_SCREEN_EDIT_TEXT_POSITION_FIRST = 0
+private const val NOTE_SCREEN_EDIT_TEXT_POSITION_SECOND = 1
 
-const val NOTE_SCREEN_EDIT_TEXT_HINT_ELEMENT_THIRD = 2
-const val NOTE_SCREEN_EDIT_TEXT_HINT_ELEMENT_FOURTH = 3
+private const val NOTE_SCREEN_EDIT_TEXT_HINT_ELEMENT_THIRD = 2
+private const val NOTE_SCREEN_EDIT_TEXT_HINT_ELEMENT_FOURTH = 3
 
 class AddNoteScreen {
 
@@ -28,19 +28,19 @@ class AddNoteScreen {
         clickBottomToolbarButton(HOME_PAGE_BOTTOM_BAR_ADD_NOTE_BUTTON_NUMBER)
     }
 
-    fun clickSecondButtonOnBottomToolbar() {
+    fun clickSecondButtonOnBottomBar() {
         clickBottomToolbarButton(NOTE_SCREEN_BOTTOM_BAR_ADD_SMALL_HEADING_NUMBER)
     }
 
-    fun clickThirdButtonOnBottomToolbar() {
+    fun clickThirdButtonOnBottomBar() {
         clickBottomToolbarButton(NOTE_SCREEN_BOTTOM_BAR_ADD_ITEM_BUTTON_NUMBER)
     }
 
-    fun clickFourthButtonOnBottomToolbar() {
+    fun clickFourthButtonOnBottomBar() {
         clickBottomToolbarButton(NOTE_SCREEN_BOTTOM_BAR_ADD_QUOTED_BUTTON_NUMBER)
     }
 
-    fun clickFifthButtonOnBottomToolbar() {
+    fun clickFifthButtonOnBottomBar() {
         clickBottomToolbarButton(NOTE_SCREEN_BOTTOM_BAR_EXTEND_MENU_BUTTON_NUMBER)
     }
 

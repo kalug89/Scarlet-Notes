@@ -51,7 +51,7 @@ class AddNoteScreen {
         )
     }
 
-    fun verifySecondSpecificInputIsAndHasTextInput() {
+    fun verifyHintTextInputIsAndHasTextInput() {
         checkHintOnEditInRecyclerView(
             NOTE_SCREEN_EDIT_TEXT_POSITION_SECOND,
             NOTE_SCREEN_EDIT_TEXT_HINT_ELEMENT_THIRD,
@@ -59,7 +59,7 @@ class AddNoteScreen {
         )
     }
 
-    fun verifySecondSpecificInputIsAndHasCodeInput() {
+    fun verifyHintCodeInputIsAndHasCodeInput() {
         checkHintOnEditInRecyclerView(
             NOTE_SCREEN_EDIT_TEXT_POSITION_SECOND,
             NOTE_SCREEN_EDIT_TEXT_HINT_ELEMENT_THIRD,
@@ -67,7 +67,7 @@ class AddNoteScreen {
         )
     }
 
-    fun verifyFirstSpecificInputIsAndHasHeadingInput() {
+    fun verifyHintHeadingInputIsAndHasHeadingInput() {
         checkHintOnEditInRecyclerView(
             NOTE_SCREEN_EDIT_TEXT_POSITION_FIRST,
             NOTE_SCREEN_EDIT_TEXT_HINT_ELEMENT_THIRD,
@@ -75,7 +75,7 @@ class AddNoteScreen {
         )
     }
 
-    fun verifyThirdSpecificInputIsAndHasListInput() {
+    fun verifyHintListInputIsAndHasListInput() {
         checkHintOnEditInRecyclerView(
             NOTE_SCREEN_EDIT_TEXT_POSITION_SECOND,
             NOTE_SCREEN_EDIT_TEXT_HINT_ELEMENT_FOURTH,
@@ -83,7 +83,7 @@ class AddNoteScreen {
         )
     }
 
-    fun verifyThirdSpecificInputIsAndHasQuoteInput() {
+    fun verifyHintQuoteInputIsAndHasQuoteInput() {
         checkHintOnEditInRecyclerView(
             NOTE_SCREEN_EDIT_TEXT_POSITION_SECOND,
             NOTE_SCREEN_EDIT_TEXT_HINT_ELEMENT_FOURTH,

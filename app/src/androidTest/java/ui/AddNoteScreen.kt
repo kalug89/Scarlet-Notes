@@ -28,19 +28,19 @@ class AddNoteScreen {
         clickBottomToolbarButton(HOME_PAGE_BOTTOM_BAR_ADD_NOTE_BUTTON_NUMBER)
     }
 
-    fun clickSecondButtonOnBottomBar() {
+    fun clickAddSmallHeadingButtonOnBottomBar() {
         clickBottomToolbarButton(NOTE_SCREEN_BOTTOM_BAR_ADD_SMALL_HEADING_NUMBER)
     }
 
-    fun clickThirdButtonOnBottomBar() {
+    fun clickAddItemButtonOnBottomBar() {
         clickBottomToolbarButton(NOTE_SCREEN_BOTTOM_BAR_ADD_ITEM_BUTTON_NUMBER)
     }
 
-    fun clickFourthButtonOnBottomBar() {
+    fun clickAddQuotedButtonOnBottomBar() {
         clickBottomToolbarButton(NOTE_SCREEN_BOTTOM_BAR_ADD_QUOTED_BUTTON_NUMBER)
     }
 
-    fun clickFifthButtonOnBottomBar() {
+    fun clickExtendMenuButtonOnBottomBar() {
         clickBottomToolbarButton(NOTE_SCREEN_BOTTOM_BAR_EXTEND_MENU_BUTTON_NUMBER)
     }
 

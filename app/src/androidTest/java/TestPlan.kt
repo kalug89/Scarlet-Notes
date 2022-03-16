@@ -37,7 +37,7 @@ class TestPlan : BaseTestPlan() {
     fun checkNoteScreenAddItemEditText() {
         addNoteScreen.run {
             clickAddNoteButton()
-            clickThirdButtonOnBottomBar()
+            clickAddItemButtonOnBottomBar()
             verifyThirdSpecificInputIsAndHasListInput()
         }
     }
@@ -46,7 +46,7 @@ class TestPlan : BaseTestPlan() {
     fun checkNoteScreenAddQuotedEditText() {
         addNoteScreen.run {
             clickAddNoteButton()
-            clickFourthButtonOnBottomBar()
+            clickAddQuotedButtonOnBottomBar()
             verifyThirdSpecificInputIsAndHasQuoteInput()
         }
     }
@@ -55,8 +55,8 @@ class TestPlan : BaseTestPlan() {
     fun checkNoteScreenSmallHeadingEditText() {
         addNoteScreen.run {
             clickAddNoteButton()
-            clickFifthButtonOnBottomBar()
-            clickSecondButtonOnBottomBar()
+            clickExtendMenuButtonOnBottomBar()
+            clickAddSmallHeadingButtonOnBottomBar()
             verifyFirstSpecificInputIsAndHasHeadingInput()
         }
     }
@@ -65,7 +65,7 @@ class TestPlan : BaseTestPlan() {
     fun checkNoteScreenAddCodeEditText() {
         addNoteScreen.run {
             clickAddNoteButton()
-            clickFifthButtonOnBottomBar()
+            clickExtendMenuButtonOnBottomBar()
             clickFifthBottomHorizontalViewButton()
             verifySecondSpecificInputIsAndHasCodeInput()
         }

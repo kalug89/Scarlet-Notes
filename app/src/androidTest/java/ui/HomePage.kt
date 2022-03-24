@@ -1,12 +1,13 @@
 package ui
 
 import ContextUtils.getResourceString
+import clickBottomToolbarButton
 import com.bijoysingh.quicknote.R
 
-const val MENU_ICON_BUTTON_NUMBER = 0
-const val NOTEBOOK_ICON_BUTTON_NUMBER = 1
-const val ADD_LIST_ICON_BUTTON_NUMBER = 2
-const val ADD_NOTE_LIST_ICON_BUTTON_NUMBER = 3
+const val HOME_PAGE_BOTTOM_BAR_MENU_BUTTON_NUMBER = 0
+const val HOME_PAGE_BOTTOM_BAR_NOTEBOOK_BUTTON_NUMBER = 1
+const val HOME_PAGE_BOTTOM_BAR_ADD_BUTTON_NUMBER = 2
+const val HOME_PAGE_BOTTOM_BAR_ADD_NOTE_BUTTON_NUMBER = 3
 
 class HomePage {
 
@@ -16,4 +17,8 @@ class HomePage {
     val settingsIconButton = R.id.toolbarIconSettings
     val debugIconButton = R.id.toolbarIconDebug
     val appToolbarTitle = getResourceString(R.string.app_name)
+
+    fun clickAddNoteButton() {
+        clickBottomToolbarButton(HOME_PAGE_BOTTOM_BAR_ADD_NOTE_BUTTON_NUMBER)
+    }
 }

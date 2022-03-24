@@ -18,6 +18,60 @@ class TestPlan : BaseTestPlan() {
     }
 
     @Test
+    fun checkNoteScreenHeadingEditText() {
+        addNoteScreen.run {
+            clickAddNoteButton()
+            verifyFirstSpecificInputIsAndHasHeadingInput()
+        }
+    }
+
+    @Test
+    fun checkNoteScreenAddContentEditText() {
+        addNoteScreen.run {
+            clickAddNoteButton()
+            verifySecondSpecificInputIsAndHasTextInput()
+        }
+    }
+
+    @Test
+    fun checkNoteScreenAddItemEditText() {
+        addNoteScreen.run {
+            clickAddNoteButton()
+            clickAddItemButtonOnBottomBar()
+            verifyThirdSpecificInputIsAndHasListInput()
+        }
+    }
+
+    @Test
+    fun checkNoteScreenAddQuotedEditText() {
+        addNoteScreen.run {
+            clickAddNoteButton()
+            clickAddQuotedButtonOnBottomBar()
+            verifyThirdSpecificInputIsAndHasQuoteInput()
+        }
+    }
+
+    @Test
+    fun checkNoteScreenSmallHeadingEditText() {
+        addNoteScreen.run {
+            clickAddNoteButton()
+            clickExtendMenuButtonOnBottomBar()
+            clickAddSmallHeadingButtonOnBottomBar()
+            verifyFirstSpecificInputIsAndHasHeadingInput()
+        }
+    }
+
+    @Test
+    fun checkNoteScreenAddCodeEditText() {
+        addNoteScreen.run {
+            clickAddNoteButton()
+            clickExtendMenuButtonOnBottomBar()
+            clickFifthBottomHorizontalViewButton()
+            verifySecondSpecificInputIsAndHasCodeInput()
+        }
+    }
+
+    @Test
     fun checkTitleContent() {
         checkMatchesStringInElement(homePage.toolbarTitleView, homePage.appToolbarTitle)
     }
@@ -42,13 +96,13 @@ class TestPlan : BaseTestPlan() {
 
     @Test
     fun checkMenuButton() {
-        clickBottomToolbarButton(MENU_ICON_BUTTON_NUMBER)
+        clickBottomToolbarButton(HOME_PAGE_BOTTOM_BAR_MENU_BUTTON_NUMBER)
         checkStringInComponentHostIsDisplayed(homeBottomSheet.homeMenuString)
     }
 
     @Test
     fun checkNotebookButton() {
-        clickBottomToolbarButton(NOTEBOOK_ICON_BUTTON_NUMBER)
+        clickBottomToolbarButton(HOME_PAGE_BOTTOM_BAR_NOTEBOOK_BUTTON_NUMBER)
         checkMatchesStringInElement(
             notebookBottomSheet.notebookToolbarTitleView,
             notebookBottomSheet.notebookTitle
@@ -57,13 +111,13 @@ class TestPlan : BaseTestPlan() {
 
     @Test
     fun checkAddListButton() {
-        clickBottomToolbarButton(ADD_LIST_ICON_BUTTON_NUMBER)
+        clickBottomToolbarButton(HOME_PAGE_BOTTOM_BAR_ADD_BUTTON_NUMBER)
         checkElementIsDisplayed(addListScreen.addListAdvancedNoteRecycler)
     }
 
     @Test
     fun noteListAddListButton() {
-        clickBottomToolbarButton(ADD_NOTE_LIST_ICON_BUTTON_NUMBER)
+        homePage.clickAddNoteButton()
         checkElementIsDisplayed(addNoteScreen.addNoteAdvancedNoteRecycler)
     }
 }

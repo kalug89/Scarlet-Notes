@@ -7,9 +7,7 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import com.bijoysingh.quicknote.R
 import com.facebook.litho.testing.espresso.ComponentHostMatchers
-import org.hamcrest.Description
-import org.hamcrest.Matcher
-import org.hamcrest.TypeSafeMatcher
+import org.hamcrest.*
 import org.hamcrest.core.AllOf.allOf
 
 fun clickButton(@IdRes viewId: Int) {
@@ -41,6 +39,43 @@ fun clickBottomToolbarButton(item: Int) {
                     withId(R.id.lithoBottomToolbar), 0
                 ), item
             )
+        )
+    )
+        .perform(click())
+}
+
+fun checkHintOnEditInRecyclerView(
+    positionRecyclerView: Int, positionEditText: Int, editTextHint: String
+) {
+    onView(
+        allOf(
+            withId(com.maubis.scarlet.base.R.id.edit),
+            childAtPosition(
+                childAtPosition(
+                    withId(R.id.advanced_note_recycler),
+                    positionRecyclerView
+                ),
+                positionEditText
+            ),
+        )
+    )
+        .check(matches(withHint(editTextHint)))
+
+}
+
+
+fun clickBottomHorizontalViewButton(
+    positionRecyclerView: Int, positionEditText: Int
+) {
+    onView(
+        Matchers.allOf(
+            childAtPosition(
+                childAtPosition(
+                    withClassName(CoreMatchers.containsString("com.facebook.litho")),
+                    positionRecyclerView
+                ),
+                positionEditText
+            ),
         )
     )
         .perform(click())
